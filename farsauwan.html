@@ -7,47 +7,73 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Farhan Julianor Rizky</h1>
-        <h1>Ahmad Sauqi</h1>
-        <h1>Rafly Setiawan</h1>
+        <h1>Portofolio Kami</h1>
         <p>Mahasiswa Pendidikan Komputer</p>
     </header>
 
     <nav>
-        <a href="#tentang">About</a>
-        <a href="#proyek">Project</a>
-        <a href="#kontak">contact</a>
+        <ul>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#proyek">Proyek</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
     </nav>
 
-    <section id="tentang">
-        <h2>Tentang Kami</h2>
-        <p id="deskripsi">
-            Kami adalah mahasiswa pilkom yang sedang belajar membuat website.<br>
-            Kami menyukai dunia teknologi dan ingin menjadi web developer.
-        </p>
-    </section>
+    <main>
 
-    <section id="proyek">
-        <h2>Proyek Kami</h2>
-        <ul id="daftarProyek">
-            <li>Website Daftar Buku</li>
-            <li>Aplikasi Pemesanan Online</li>
-            <li>To-Do List Sederhana</li>
-        </ul>
-        <button id="tambahProyek">Tambah Proyek</button>
-    </section>
+        <section id="profil">
+            <h2>Profil Anggota</h2>
+            <ul>
+                <li>Farhan Julianor Rizky</li>
+                <li>Ahmad Sauqi</li>
+                <li>Rafly Setiawan</li>
+            </ul>
+        </section>
 
-    <section id="kontak">
-        <h2>Kontak</h2>
-        <p>Email: <span id="email">frhnjuli@email.com</span></p>
-        <p>Instagram: <span id="instagram">@farhanomali</span></p>
-    </section>
+        <section id="tentang">
+            <h2>Tentang Kami</h2>
+            <p>
+                Kami adalah mahasiswa Pendidikan Ilmu Komputer yang sedang belajar membuat website.
+                Kami menyukai dunia teknologi dan bercita-cita menjadi web developer profesional.
+            </p>
+        </section>
+
+        <section id="proyek">
+            <h2>Proyek Kami</h2>
+            <ul id="daftarProyek">
+                <li>Website Daftar Buku</li>
+                <li>Aplikasi Pemesanan Online</li>
+                <li>To-Do List Sederhana</li>
+            </ul>
+            <button id="tambahProyek">Tambah Proyek</button>
+        </section>
+
+        <section id="kontak">
+            <h2>Kontak</h2>
+            <p>Email: <a href="mailto:frhnjuli@email.com">frhnjuli@email.com</a></p>
+            <p>Instagram: <a href="https://instagram.com/farhanomali" target="_blank">@farhanomali</a></p>
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; 2025 Farhan Julianor Rizky, Ahmad Sauqi, Rafly Setiawan</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const tombolTambah = document.getElementById("tambahProyek");
+        tombolTambah.addEventListener("click", function() {
+            const namaProyek = prompt("Masukkan nama proyek baru:");
+            if (namaProyek) {
+                const daftar = document.getElementById("daftarProyek");
+                const itemBaru = document.createElement("li");
+                itemBaru.textContent = namaProyek;
+                daftar.appendChild(itemBaru);
+            }
+        });
+    </script>
+
 </body>
 </html>
